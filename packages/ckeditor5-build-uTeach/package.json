@@ -93,5 +93,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "preversion": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
