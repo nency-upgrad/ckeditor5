@@ -30,6 +30,8 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -58,7 +60,8 @@ BalloonEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	Alignment
 ];
 
 // Editor configuration.
@@ -81,7 +84,8 @@ BalloonEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			'alignment'
 		]
 	},
 	image: {
@@ -100,6 +104,9 @@ BalloonEditor.defaultConfig = {
 			'tableRow',
 			'mergeTableCells'
 		]
+	},
+	alignment: {
+		options: [ 'left', 'right', 'center' ]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
